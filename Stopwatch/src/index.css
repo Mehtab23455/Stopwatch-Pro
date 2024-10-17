@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap'); /* Importing Cinzel font */
+body {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center content vertically */
+  height: 100vh; /* Full viewport height */
+  font-family: 'Arial', sans-serif; /* Default font family */
+  color: #ffffff; /* Light text color for contrast */
+  background: linear-gradient(135deg, #2C3E50, #1A1A1A); /* Dark gradient background */
+}
+
+.stopwatch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 5px solid #4E3B31; /* Match border color with the dark brown gradient */
+  border-radius: 50px; /* Rounded corners */
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+  padding: 30px; /* Padding */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+  max-width: 400px; /* Limit width for better layout */
+  margin: 20px; /* Margin for spacing from edges */
+}
+.display{
+  background: linear-gradient(135deg, #4E3B31, #3B2A23); 
+  color: #ECF0F1; /* Light text color for contrast */
+  border-radius: 15px; /* Rounded corners */
+  padding: 20px; /* Padding */
+  font-size: 48px; /* Large font size for visibility */
+  font-family: 'Cinzel', serif; /* Using Cinzel font */
+  font-weight: 700; /* Bold text */
+  text-align: center; /* Centered text */
+  letter-spacing: 2px; /* Spacing between letters */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Soft shadow for depth */
+  transition: transform 0.3s ease; /* Transition for animation */
+
+}
+.display:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.display:before {
+  content: ""; /* Pseudo-element for decorative effect */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 15px; /* Match the border radius */
+  background: rgba(255, 255, 255, 0.1); /* Light overlay for depth */
+  z-index: -1; /* Behind the text */
+}
+.controls{
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding:10px 20px;
+  margin: 5px;
+  min-width: 125px;
+  border: none;
+  border-radius:10px;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.5s ease;
+
+}
+.start-button{
+  background: linear-gradient(90deg, #4CAF50, #2E7D32); /* Gradient background */
+  padding:10px 20px;
+  color: white; /* White text */
+  border: none; /* No border */
+  border-radius: 12px; /* Rounded corners */
+  padding: 12px 24px; /* Vertical and horizontal padding */
+  font-size: 16px; /* Font size */
+  font-weight: 600; /* Slightly bolder text */
+  cursor: pointer; /* Pointer cursor on hover */
+  text-transform: uppercase; /* Uppercase text */
+  letter-spacing: 1px; /* Spacing between letters */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: all 0.3s ease; /* Smooth transition */
+  outline: none; /* Remove outline */
+  background-color: hsl(115,100%,40%);
+}
+.start-button:hover{
+  background: linear-gradient(90deg, #388E3C, #1B5E20); /* Even darker gradient when active */
+  transform: translateY(0) scale(1); /* Reset scale */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Reduce shadow */
+  background-color: hsl(115,100%,35%);
+}
+.stop-button{
+  background: linear-gradient(90deg, #FF5733, #C70039); /* Red gradient background */
+  padding:10px 20px;
+  color: white; /* White text */
+  border: none; /* No border */
+  border-radius: 12px; /* Rounded corners */
+  padding: 12px 24px; /* Vertical and horizontal padding */
+  font-size: 16px; /* Font size */
+  font-weight: 600; /* Slightly bolder text */
+  cursor: pointer; /* Pointer cursor on hover */
+  text-transform: uppercase; /* Uppercase text */
+  letter-spacing: 1px; /* Spacing between letters */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: all 0.3s ease; /* Smooth transition */
+  outline: none; /* Remove outline */
+  background-color: hsl(10,90%,50%);
+}
+.stop-button:hover{
+  background: linear-gradient(90deg, #FF6F40, #A50027); /* Darker gradient on hover */
+  transform: translateY(-2px) scale(1.02); /* Lift and scale effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+  background-color: hsl(10,90%,45%);
+}
+.reset-button{
+  background: linear-gradient(90deg, #1E90FF, #0056B3); /* Blue gradient background */
+  padding:10px 20px;
+  color: white; /* White text */
+  border: none; /* No border */
+  border-radius: 12px; /* Rounded corners */
+  padding: 12px 24px; /* Vertical and horizontal padding */
+  font-size: 16px; /* Font size */
+  font-weight: 600; /* Slightly bolder text */
+  cursor: pointer; /* Pointer cursor on hover */
+  text-transform: uppercase; /* Uppercase text */
+  letter-spacing: 1px; /* Spacing between letters */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: all 0.3s ease; /* Smooth transition */
+  outline: none; /* Remove outline */
+  background-color: hsl(205,90%,60%);
+}
+.reset-button:hover{
+  background: linear-gradient(90deg, #48A0FF, #004085); /* Darker gradient on hover */
+  transform: translateY(-2px) scale(1.02); /* Lift and scale effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+
+  background-color: hsl(205,90%,55%);
+}
